@@ -61,7 +61,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
             AI-Powered Services for
             <br />
-            <span className="cta-headline">
+            <span className="dynamic-gradient-text">
               Future-Driven Businesses
             </span>
           </h2>
@@ -85,7 +85,7 @@ const Services = () => {
               </div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center mr-4 service-icon">
+                  <div className="w-12 h-12 dynamic-gradient-icon rounded-lg flex items-center justify-center mr-4 service-icon">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>

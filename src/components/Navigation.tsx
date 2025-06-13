@@ -109,16 +109,13 @@ const Navigation = () => {
                         onMouseEnter={() => setShowSpecificDropdown(true)}
                         onMouseLeave={() => setShowSpecificDropdown(false)}
                       >
-                        <Link
-                          to="/specservices"
-                          className="nav-dropdown-item w-full flex items-center justify-between px-6 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200"
-                        >
+                        <div className="nav-dropdown-item flex items-center justify-between px-6 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer">
                           <div>
                             <div className="font-medium">Specific Niche</div>
                             <div className="text-xs text-gray-500 mt-1">Industry-focused solutions</div>
                           </div>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showSpecificDropdown ? 'rotate-180' : ''}`} />
-                        </Link>
+                        </div>
                         
                         {/* Specific Niche Nested Dropdown */}
                         <div className={`nested-dropdown absolute left-full top-0 w-56 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl ml-2 shadow-2xl overflow-hidden ${showSpecificDropdown ? 'show' : ''}`}>

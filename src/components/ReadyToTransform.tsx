@@ -18,7 +18,7 @@ const ReadyToTransform = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
             Ready To Transform
             <br />
-            <span className="cta-headline">
+            <span className="dynamic-gradient-text">
               Your Business?
             </span>
           </h2>

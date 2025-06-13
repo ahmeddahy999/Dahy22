@@ -48,7 +48,7 @@ const ChatBot = () => {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-full flex items-center justify-center mr-3">
+              <div className="w-8 h-8 dynamic-gradient-icon rounded-full flex items-center justify-center mr-3">
                 <MessageCircle className="w-4 h-4 text-white" />
               </div>
               <div>
@@ -89,7 +89,7 @@ const ChatBot = () => {
               />
               <button
                 onClick={sendMessage}
-                className="w-8 h-8 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+                className="w-8 h-8 dynamic-gradient-icon rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
               >
                 <Send className="w-4 h-4 text-white" />
               </button>

@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 pb-32">
-      {/* Animated Background */}
+      {/* Animated Background - RESTORED */}
       <div className="animated-background">
         <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-black/95"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(67,100,247,0.08)_0%,rgba(0,82,212,0.03)_40%,transparent_70%)]"></div>
@@ -32,7 +32,7 @@ const Hero = () => {
         <div>
           {/* Badge */}
           <div className="hero-badge inline-flex items-center px-4 py-2 mb-16 mt-8 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm hover:scale-105 transition-all duration-300">
-            <span className="text-sm font-bold cta-headline tracking-wide">2025</span>
+            <span className="text-sm font-bold dynamic-gradient-text tracking-wide">2025</span>
             <span className="mx-2 text-gray-500">•</span>
             <span className="text-xs font-light text-gray-300 tracking-wide">Next-Gen Ai Integrations</span>
           </div>
@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className="hero-headline text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
             <span className="block text-white">AI-Driven Success</span>
-            <span className="block cta-headline">
+            <span className="block dynamic-gradient-text">
               Redefining the Future.
             </span>
           </h1>

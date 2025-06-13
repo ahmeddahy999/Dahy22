@@ -40,7 +40,7 @@ const FAQ = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
-            Frequently Asked <span className="cta-headline">Questions</span>
+            Frequently Asked <span className="dynamic-gradient-text">Questions</span>
           </h2>
           <p className="text-base font-light text-gray-400 max-w-3xl mx-auto leading-relaxed tracking-wide">
             Find answers to common questions about our AI automation services and solutions.
@@ -59,7 +59,7 @@ const FAQ = () => {
               >
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-semibold text-white tracking-wide pr-8 faq-question">{faq.question}</h3>
-                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center faq-icon">
+                  <div className="flex-shrink-0 w-8 h-8 dynamic-gradient-icon rounded-lg flex items-center justify-center faq-icon">
                     {openIndex === index ? (
                       <Minus className="w-5 h-5 text-white" />
                     ) : (
