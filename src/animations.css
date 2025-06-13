@@ -1,0 +1,419 @@
+/* Modern smooth animations with high FPS and light loading */
+.animate-on-scroll {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity, filter;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  filter: blur(0) !important;
+}
+
+/* Modern smooth keyframe animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Modern blur and fade animations */
+@keyframes modernFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes modernSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes modernBlurFade {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.modern-fade-in {
+  animation: modernFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.modern-slide-up {
+  animation: modernSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.modern-blur-fade {
+  animation: modernBlurFade 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Hero badge animation */
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.badge-float {
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+/* Breathing effect for hero background - optimized */
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes breathe-slow {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.1) rotate(1deg);
+  }
+}
+
+@keyframes breathe-reverse {
+  0%, 100% {
+    opacity: 0.08;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 2s ease-in-out infinite;
+}
+
+.animate-breathe-slow {
+  animation: breathe-slow 2.5s ease-in-out infinite;
+}
+
+.animate-breathe-reverse {
+  animation: breathe-reverse 2.2s ease-in-out infinite;
+}
+
+/* Fade in animation - faster */
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ChatBot animations */
+.animate-in {
+  animation: slideInFromBottom 0.2s ease-out forwards;
+}
+
+.fade-in-0 {
+  opacity: 0;
+}
+
+.slide-in-from-bottom-4 {
+  transform: translateY(16px);
+}
+
+.duration-300 {
+  transition-duration: 200ms;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle pulse shadow for navbar */
+.subtle-nav-glow {
+  position: relative;
+  box-shadow: 0 0 4px rgba(0, 82, 212, 0.2);
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 0 4px rgba(0, 82, 212, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(67, 100, 247, 0.3);
+  }
+}
+
+/* Dynamic text gradient animation - faster */
+.dynamic-gradient-text {
+  background: linear-gradient(45deg, #0052D4, #4364F7, #6FB1FC, #0052D4, #4364F7);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 2.5s ease infinite;
+}
+
+/* Dynamic icon gradient animation - faster */
+.dynamic-gradient-icon {
+  background: linear-gradient(45deg, #0052D4, #4364F7, #6FB1FC, #0052D4, #4364F7);
+  background-size: 300% 300%;
+  animation: gradient-shift 2.5s ease infinite;
+  border-radius: inherit;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glass effects - optimized */
+.glass-card {
+  transition: all 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+}
+
+/* Button animations with opacity sweep - faster */
+.glass-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.4s ease;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+.glass-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom cursor styles */
+.custom-cursor.hovering {
+  transform: scale(1.3) !important;
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, #3B82F6 20%, #14B8A6 100%) !important;
+  filter: blur(0.5px) !important;
+}
+
+.custom-cursor.clicking {
+  transform: scale(0.8) !important;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, #60A5FA 30%, #2DD4BF 100%) !important;
+}
+
+/* Glow effects */
+.glow-sm {
+  box-shadow: 0 0 10px rgba(67, 100, 247, 0.5);
+}
+
+.glow-md {
+  box-shadow: 0 0 20px rgba(67, 100, 247, 0.4);
+}
+
+.glow-lg {
+  box-shadow: 0 0 30px rgba(67, 100, 247, 0.3);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0052D4, #6FB1FC);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4364F7, #6FB1FC);
+}
+
+/* Dropdown animations */
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dropdown-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dropdown-exit-active {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Dropdown hover persistence with smooth animations */
+.dropdown-persistent:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Nested dropdown animations */
+.nested-dropdown-enter {
+  opacity: 0;
+  transform: translateX(-10px) scale(0.95);
+}
+
+.nested-dropdown-enter-active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nested-dropdown-exit {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.nested-dropdown-exit-active {
+  opacity: 0;
+  transform: translateX(-10px) scale(0.95);
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Nested dropdown hover persistence */
+.nested-dropdown-persistent:hover .nested-dropdown-menu,
+.nested-dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) scale(1);
+}
+
+.nested-dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px) scale(0.95);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
