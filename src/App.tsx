@@ -1,17 +1,28 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Home from './pages/Home';
 import SpecServices from './pages/SpecServices.tsx';
 import GenServices from './pages/GenServices';
 import './animations.css';
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/specservices" element={<SpecServices />} />
-      <Route path="/genservices" element={<GenServices />} />
-    </Routes>
+    <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        classNames="page-transition"
+        timeout={400}
+      >
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/specservices" element={<SpecServices />} />
+          <Route path="/genservices" element={<GenServices />} />
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
   );
 }
 

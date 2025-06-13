@@ -38,9 +38,9 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-32 relative bg-black">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20 animate-on-scroll opacity-0 translate-y-8 blur-sm">
+        <div className="text-center mb-20 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
-            Frequently Asked <span className="dynamic-gradient-text">Questions</span>
+            Frequently Asked <span className="cta-headline">Questions</span>
           </h2>
           <p className="text-base font-light text-gray-400 max-w-3xl mx-auto leading-relaxed tracking-wide">
             Find answers to common questions about our AI automation services and solutions.
@@ -51,18 +51,15 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="animate-on-scroll opacity-0 translate-y-8 blur-sm mb-6"
-              style={{ 
-                transitionDelay: `${index * 0.1}s`
-              }}
+              className={`animate-on-scroll mb-6 stagger-${index + 1}`}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full glass-card bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm p-6 text-left hover:bg-white/10 transition-all duration-300 group"
+                className={`faq-item w-full bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm p-6 text-left hover:bg-white/10 group ${openIndex === index ? 'open' : ''}`}
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-white tracking-wide pr-8">{faq.question}</h3>
-                  <div className="flex-shrink-0 w-8 h-8 dynamic-gradient-icon rounded-lg flex items-center justify-center">
+                  <h3 className="text-lg font-semibold text-white tracking-wide pr-8 faq-question">{faq.question}</h3>
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center faq-icon">
                     {openIndex === index ? (
                       <Minus className="w-5 h-5 text-white" />
                     ) : (
@@ -72,11 +69,11 @@ const FAQ = () => {
                 </div>
               </button>
 
-              {openIndex === index && (
-                <div className="mt-4 glass-card bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm p-6 animate-fade-in">
+              <div className={`faq-answer overflow-hidden transition-all duration-400 ${openIndex === index ? 'max-h-48 pt-4' : 'max-h-0'}`}>
+                <div className="bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm p-6">
                   <p className="text-gray-300 font-light leading-relaxed tracking-wide">{faq.answer}</p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

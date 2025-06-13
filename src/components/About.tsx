@@ -28,9 +28,9 @@ const About = () => {
   return (
     <section id="about" className="py-32 relative bg-black">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20 animate-on-scroll opacity-0 translate-y-8 blur-sm">
+        <div className="text-center mb-20 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
-            About Our <span className="dynamic-gradient-text">Vision</span>
+            About Our <span className="cta-headline">Vision</span>
           </h2>
           <p className="text-base font-light text-gray-400 max-w-3xl mx-auto leading-relaxed tracking-wide">
             We are pioneers in artificial intelligence, dedicated to transforming businesses through innovative automation solutions that drive unprecedented growth and efficiency.
@@ -41,12 +41,9 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="animate-on-scroll opacity-0 translate-y-8 blur-sm glass-card p-8 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-all duration-500 group hover:transform hover:scale-105"
-              style={{ 
-                transitionDelay: `${index * 0.1}s`
-              }}
+              className={`animate-on-scroll feature-card p-8 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:bg-white/10 group stagger-${index + 1}`}
             >
-              <div className="w-16 h-16 dynamic-gradient-icon rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center mb-6 feature-icon">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-white tracking-wide">{feature.title}</h3>

@@ -50,18 +50,18 @@ const Services = () => {
 
   return (
     <section id="services" className="py-32 relative">
-      {/* Same dark background as hero */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-black/95"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(67,100,247,0.08)_0%,rgba(0,82,212,0.03)_40%,transparent_70%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(111,177,252,0.06)_0%,transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(0,82,212,0.04)_0%,transparent_60%)]"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20 animate-on-scroll opacity-0 translate-y-8 blur-sm">
+        <div className="text-center mb-20 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
             AI-Powered Services for
             <br />
-            <span className="dynamic-gradient-text">
+            <span className="cta-headline">
               Future-Driven Businesses
             </span>
           </h2>
@@ -74,21 +74,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="animate-on-scroll opacity-0 translate-y-8 blur-sm glass-card bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm overflow-hidden group hover:bg-white/10 transition-all duration-500 hover:transform hover:scale-105"
-              style={{ 
-                transitionDelay: `${index * 0.1}s`
-              }}
+              className={`animate-on-scroll service-card bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm overflow-hidden group hover:bg-white/10 stagger-${index + 1}`}
             >
               <div className="aspect-video overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="service-image w-full h-full object-cover"
                 />
               </div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 dynamic-gradient-icon rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center mr-4 service-icon">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -102,10 +99,10 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 animate-on-scroll opacity-0 translate-y-8 blur-sm" style={{ transitionDelay: '0.6s' }}>
+        <div className="text-center mt-16 animate-on-scroll stagger-6">
           <Link
             to="/specservices"
-            className="glass-button px-8 py-4 bg-gradient-to-r from-[#0052D4]/20 via-[#4364F7]/20 to-[#6FB1FC]/20 border border-[#4364F7]/30 rounded-lg backdrop-blur-sm font-light tracking-wide hover:from-[#0052D4]/30 hover:via-[#4364F7]/30 hover:to-[#6FB1FC]/30 transition-all duration-300 inline-block"
+            className="premium-button px-8 py-4 bg-gradient-to-r from-[#0052D4]/20 via-[#4364F7]/20 to-[#6FB1FC]/20 border border-[#4364F7]/30 rounded-lg backdrop-blur-sm tracking-wide hover:from-[#0052D4]/30 hover:via-[#4364F7]/30 hover:to-[#6FB1FC]/30 transition-all duration-300 inline-block text-white"
           >
             Load More
           </Link>

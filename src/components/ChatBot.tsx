@@ -12,12 +12,10 @@ const ChatBot = () => {
   useEffect(() => {
     if (prefilledMessage && isOpen) {
       setInputValue(prefilledMessage);
-      // Auto-send the prefilled message
       setTimeout(() => {
         setMessages(prev => [...prev, { type: 'user', text: prefilledMessage }]);
         setInputValue('');
         
-        // Simulate bot response
         setTimeout(() => {
           setMessages(prev => [...prev, {
             type: 'bot',
@@ -33,7 +31,6 @@ const ChatBot = () => {
       setMessages([...messages, { type: 'user', text: inputValue }]);
       setInputValue('');
 
-      // Simulate bot response
       setTimeout(() => {
         setMessages(prev => [...prev, {
           type: 'bot',
@@ -47,11 +44,11 @@ const ChatBot = () => {
     <>
       {/* Chat Widget */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-96 glass-card bg-black/80 border border-white/20 rounded-xl backdrop-blur-md z-50 flex flex-col animate-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed bottom-24 right-6 w-80 h-96 bg-black/80 border border-white/20 rounded-xl backdrop-blur-md z-50 flex flex-col page-transition-enter page-transition-enter-active">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center">
-              <div className="w-8 h-8 dynamic-gradient-icon rounded-full flex items-center justify-center mr-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-full flex items-center justify-center mr-3">
                 <MessageCircle className="w-4 h-4 text-white" />
               </div>
               <div>
@@ -92,7 +89,7 @@ const ChatBot = () => {
               />
               <button
                 onClick={sendMessage}
-                className="w-8 h-8 dynamic-gradient-icon rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+                className="w-8 h-8 bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
               >
                 <Send className="w-4 h-4 text-white" />
               </button>
@@ -104,7 +101,7 @@ const ChatBot = () => {
       {/* Toggle Button */}
       <button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-[#0052D4] via-[#4364F7] to-[#6FB1FC] rounded-full flex items-center justify-center shadow-lg hover:from-[#0052D4]/80 hover:via-[#4364F7]/80 hover:to-[#6FB1FC]/80 transition-all duration-300 z-50 glow-md hover:scale-110"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-[#0052D4] via-[#4364F7] to-[#6FB1FC] rounded-full flex items-center justify-center shadow-lg hover:from-[#0052D4]/80 hover:via-[#4364F7]/80 hover:to-[#6FB1FC]/80 transition-all duration-300 z-50 hover-glow hover:scale-110"
       >
         {isOpen ? (
           <X className="w-6 h-6 text-white" />

@@ -2,10 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="py-20 border-t border-white/10 relative">
-      {/* Darker background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#0052D4]/8 to-black/80"></div>
-      
+    <footer className="py-20 border-t border-white/10 relative bg-black">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
@@ -21,9 +18,9 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Parts */}
+          {/* Pages */}
           <div>
-            <h3 className="text-white font-semibold mb-6 tracking-wide">Parts</h3>
+            <h3 className="text-white font-semibold mb-6 tracking-wide">Pages</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#home" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative px-2 py-1 rounded hover:bg-blue-400/10">
@@ -37,7 +34,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#services" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide relative px-2 py-1 rounded hover:bg-blue-400/10">
-                  Portfolio
+                  Services
                 </a>
               </li>
               <li>
@@ -53,7 +50,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social - Left aligned under Social */}
+          {/* Social */}
           <div>
             <h3 className="text-white font-semibold mb-6 tracking-wide">Social</h3>
             <ul className="space-y-3">
@@ -69,7 +66,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 font-light tracking-wide block">
-                  Youtube
+                  LinkedIn
                 </a>
               </li>
             </ul>
@@ -84,7 +81,7 @@ const Footer = () => {
                 placeholder="Enter Your Email..."
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-all duration-300 font-light"
               />
-              <button className="glass-button px-8 py-4 bg-gradient-to-r from-[#0052D4]/20 via-[#4364F7]/20 to-[#6FB1FC]/20 border border-[#4364F7]/30 rounded-lg backdrop-blur-sm font-light tracking-wide hover:from-[#0052D4]/30 hover:via-[#4364F7]/30 hover:to-[#6FB1FC]/30 transition-all duration-300">
+              <button className="premium-button px-8 py-4 bg-gradient-to-r from-[#0052D4]/20 via-[#4364F7]/20 to-[#6FB1FC]/20 border border-[#4364F7]/30 rounded-lg backdrop-blur-sm tracking-wide hover:from-[#0052D4]/30 hover:via-[#4364F7]/30 hover:to-[#6FB1FC]/30 transition-all duration-300 text-white">
                 Subscribe
               </button>
             </div>
